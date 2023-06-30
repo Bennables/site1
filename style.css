@@ -1,0 +1,94 @@
+div{
+    border: 2px;
+    outline-style:solid;
+    outline-width: 2px;
+    outline-color: black;
+    /*   border: 2px solid #ffa94d; */
+}
+
+
+.wrapper{
+    display:grid;
+    /* in grid template columns, you can us px, fr(fraction of the page), can mix */
+    /* for 3 equal pieces, can do repeat(3, 1fr); */
+    /* repeat(3, 1fr 2fr); == 1 2 1 2 1 2 */
+    grid-template-columns: 100px 100px 100px 50px;
+    /* if you want to bind elements to specific rectangles in grid
+
+    .header {
+    grid-area: hd;
+    }
+    .footer {
+    grid-area: ft;
+    }
+    .content {
+    grid-area: main;
+    }
+    .sidebar {
+    grid-area: sd;
+    }
+    .wrapper {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+        "hd hd hd hd   hd   hd   hd   hd   hd"
+        "sd sd sd main main main main main main"
+        ".  .  .  ft   ft   ft   ft   ft   ft";
+}
+
+ */
+    
+
+    /* sets the size for the rows */
+    /* grid-auto-rows: minmax(100px, auto); min 100px, max is the height of tallest element in row */
+    grid-auto-rows: 200px;
+}
+
+.one{
+    grid-column-start: 1;
+    grid-column-end:5; 
+    /* 
+    grid-column: 1 / 5;
+
+    using span
+    grid-column: 1/span 4
+
+    start from bottom or start from right
+    grid-column-start: span 2;
+    grid-column-end: 5;
+        this starts at then end, and then moves backwards to span 2
+    
+
+    or 
+    grid-area: row start / col start / row end / col end;
+
+    if you wanna use negatives, it starts from the end, doesn't include the end box
+
+    stretch across grid
+    1 / -1
+
+    row and column gaps
+    row-gap: fdjklfsd
+    column-gap: flskdjaf
+
+    also
+    don't need end column if you only want one grid box, it defaults to that
+    */
+
+}
+
+/* 
+.box1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.box2 {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
+} 
+*/
